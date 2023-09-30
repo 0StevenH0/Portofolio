@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        Steven Halim
+        <hr class="divider">
+    </header>
+
+    <body>
+
+        <div class="card">
+            <p style="font-size: 24px;">Portofolio</p>
+            <div class="card-desc" id="desc_1">
+                <p>My protofolio mainly includes both deep learning projects and kaggle competition code</p>
+                <ul class="card-points">
+                    my portofolio features the following projects:
+                    <li> <a href="#card1">Mitigating Adversarial Attacks on trained Deep Learning Models</a></li>
+                    <li> <a href="#card2">Instance segmentation on blood vessels</a></li>
+                    <li> <a href="#card3">Protein Function Prediction</a></li>
+                    <li> <a href="#card4">Face Recognition</a></li>
+                    <li> <a href="#card5">Web Scrapping</a></li>
+                </ul>
+
+                <p> For more details about my qualifications and experience, please take a look at my <a href="CV.PDF" download="CV.pdf">CV</a></p>
+            </div>
+        </div>
+        <div class="card" id="card1">
+
+            <div class="title-container">
+                <div class="card-title">
+                    Mitigating Adversarial Attacks on trained Deep Learning Models
+                </div>
+
+                <div class="card-date">
+                    09/2023 - current date
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- <img src="OIP.jfif" alt="Image" class="card-image"> -->
+
+            <div class="card-highlights">
+                <p> Highlights </p>
+            </div>
+
+            <ul class="card-points">
+                <li>
+                    Created adversarial image generator capable of generating uniform noise, gaussian noise, fgsm and
+                    pgd perturbated image, with capabilities to significantly reduce image detection accuracy
+                </li>
+                <br>
+                <li>
+                    Developed defense mechanism capable of slightly mitigating the effect of Adversarial image
+                </li>
+            </ul>
+
+            <div class="card-desc" id="desc_1">
+                <p class="desc">
+                    Summary
+                </p>
+                <p>
+                    In the realm of deep learning and artificial intelligence, the robustness and security of machine
+                    learning models are paramount. Adversarial attacks pose a significant threat to the reliability and
+                    integrity of these models. They can lead to misleading results, compromise system security, and
+                    erode trust in AI technologies.
+                </p>
+                <p>
+                    At first, i created adversarial image generators to handle adversarial attacks, my original approach
+                    was to train a trained model with adversarial attacked image, however doing so significantly lower
+                    model`s ability in handling normal image, later on i tried to train a layer with capabilities to handle
+                    both noise and normal image, this can be achieved by trying to mimic conv layer result of original conv
+                    layer trained on normal image, and a new layer trained on noised image, however this approach also
+                    led to similar problems and result worse than the first approach.
+                </p>
+
+            </div>
+
+            <div class="card-links">
+                <!-- <button class="btn">📜 Read more</button> -->
+                <button class="btn" onclick="window.open('https://github.com/0StevenH0/WebScrapping/tree/main/IMDB')">💻
+                    GitHub repo</button>
+            </div>
+
+        </div>
+        
+        <div class="card" id="card2">
+
+            <div class="title-container">
+                <div class="card-title">
+                    Instance segmentation on blood vessels
+                </div>
+
+                <div class="card-date">
+                    06/2023 - 08/2023
+                </div>
+            </div>
+
+            <hr class="divider">
+            <div class="card-image">
+                <img src="hacking the human vasculature.png" alt="Image" class="card-image">
+                <img src="hacking the human vasculature2.png" alt="Image" class="card-image">
+            </div>
+
+            <div class="card-highlights">
+                <p> Highlights </p>
+            </div>
+
+            <ul class="card-points">
+                <li>
+                    Utilized YOLO (You Only Look Once) architecture and modified it to adapt to the specific challenge of 
+instance segmentation of blood vessel for kaggle competition.
+                </li>
+            </ul>
+
+            <div class="card-desc" id="desc_1">
+                <p class="desc">
+                    Summary
+                </p>
+                <p>
+                    The importance of mapping the human vasculature, particularly the microvasculature, lies in its fundamental role in ensuring the proper functioning of our body's organs and tissues. This task involves understanding the intricate interactions, spatial organization, and specialization of the approximately 37 trillion cells that make up the human body.
+                Source : <a onclick="window.open('https://www.kaggle.com/competitions/hubmap-hacking-the-human-vasculature')">Kaggle</a>
+                </p>
+                <p>
+                    I leveraged the YOLO (You Only Look Once) architecture, a widely recognized object detection model, and customized it to suit the unique requirements of microvascular structure segmentation.
+                    Then later on mask the result using coco masking
+                </p>
+                <p>
+                    in training the model, i'm using similar approach to that of YOLO paper, i first crop and resized the original image and their region, later on i train it on a classification model to predict whether the cropped part has blood vessel or not, after that i use the weight of all conv layer from classification model, and modify it to that of YOLO architecture. 
+                </p>
+            </div>
+
+            <div class="card-links">
+                <!-- <button class="btn">📜 Read more</button> -->
+                <!-- <button class="btn" onclick="window.open('https://github.com/0StevenH0/face_recognition')">💻 GitHub
+                    repo</button> -->
+            </div>
+
+        </div>
+
+        <div class="card" id="card3">
+
+            <div class="title-container">
+                <div class="card-title">
+                    CAFA 5 Protein Function Prediction
+                </div>
+
+                <div class="card-date">
+                    05/2023 - 06/2023
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- <img src="OIP.jfif" alt="Image" class="card-image"> -->
+
+            <div class="card-highlights">
+                <p> Highlights </p>
+            </div>
+
+            <ul class="card-points">
+                <li>
+                    Applied the TAPE (The Annotated Transformer for Protein Structure Prediction) library to develop a multi class classification model able to do protein function prediction for kaggle competition.
+                </li>
+            </ul>
+
+            <div class="card-desc" id="desc_1">
+                <p class="desc">
+                    Summary
+                </p>
+                <p>
+                    The Gene Ontology (GO) serves as a hierarchical framework for elucidating the biological functions of genes and gene products, offering insights at varying levels of abstraction (Ashburner et al., 2000). It provides a robust model for comprehending the multifaceted nature of protein functionality.
+
+In practical terms, the GO leverages experimentally established term-protein assignments as class labels for individual proteins. In essence, when a protein is associated with a specific term, it signifies that rigorous experimental evidence validates its role in carrying out that particular function. Through the systematic processing of these annotated terms, a valuable dataset emerges, encapsulating proteins and their empirically verified functional attributes for each term. This dataset serves as a valuable resource for further research and exploration.
+                </p>
+                <p>
+                    I applied the TAPE (The Annotated Transformer for Protein Structure Prediction) library to develop a robust multi-class classification model. Leveraging TAPE's pre-trained transformer models, particularly BERT, I harnessed their power to encode and analyze protein sequences effectively.
+                </p>    
+                <p>
+                    As the Tape's embedding dimension are too large being (512 / 768) in dimension, i crafted my own generator, using sparse matrix and using top-n approach to optimize my memory usage.
+                </p>
+            </div>
+
+            <div class="card-links">
+                <!-- <button class="btn">📜 Read more</button> -->
+                <!-- <button class="btn" onclick="window.open('https://github.com/0StevenH0/face_recognition')">💻 GitHub
+                    repo</button> -->
+            </div>
+
+        </div>
+
+        <div class="card" id="card4">
+
+            <div class="title-container">
+                <div class="card-title">
+                    Face Recognition
+                </div>
+
+                <div class="card-date">
+                    05/2023
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- <img src="OIP.jfif" alt="Image" class="card-image"> -->
+
+            <div class="card-highlights">
+                <p> Highlights </p>
+            </div>
+
+            <ul class="card-points">
+                <li> Employed one-shot learning techniques, create architecture in siamese and using triplet loss as its
+                    loss function,
+                    to develop a Face Recognition model capable of accurately identifying individuals even with limited
+                    training samples</li>
+                <br>
+                <li> Extracted facial data from diverse sources, including thousands of images featuring faces of famous
+                    individuals, as well as cases with limited data where some faces had only a single example. </li>
+            </ul>
+
+            <div class="card-desc" id="desc_1">
+                <p class="desc">
+                    Summary
+                </p>
+                <p>In the realm of computer vision and biometrics, Face Recognition stands as a critical technology with
+                    numerous applications, from security and access control to personalization and user authentication.
+                    Its potential to enhance security and user experiences across various domains</p>
+                <p>In response to the challenges posed by limited training data and the need for accurate Face
+                    Recognition, I designed and implemented a cutting-edge solution. Employing one-shot learning
+                    techniques, I developed a robust Face Recognition model. This model utilized a Siamese architecture,
+                    complemented by triplet loss as its primary loss function. These choices allowed the model to excel
+                    in accurately identifying individuals, even when faced with the constraints of limited training
+                    samples.</p>
+            </div>
+
+            <div class="card-links">
+                <!-- <button class="btn">📜 Read more</button> -->
+                <button class="btn" onclick="window.open('https://github.com/0StevenH0/face_recognition')">💻 GitHub
+                    repo</button>
+            </div>
+
+        </div>
+
+        <div class="card" id="card5">
+
+            <div class="title-container">
+                <div class="card-title">
+                    Web Scrapping
+                </div>
+
+                <div class="card-date">
+                    09/2022
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- <img src="OIP.jfif" alt="Image" class="card-image"> -->
+
+            <div class="card-highlights">
+                <p> Highlights </p>
+            </div>
+
+            <ul class="card-points">
+                <li>
+                    Developed a data scraping pipeline using Python's Selenium library to extract movie information from
+                    IMDB, including details such as titles, release dates, ratings, and cast information, enabling
+                    comprehensive data collection for analysis and research purposes.</li>
+            </ul>
+
+            <div class="card-desc" id="desc_1">
+                <p class="desc">
+                    Summary
+                </p>
+                <p>Web scraping is a vital technique in the realm of data acquisition and analysis. It enables the
+                    extraction of valuable data from websites, allowing for comprehensive research, analysis, and
+                    insights. </p>
+                <p>I crafted a data extraction pipeline that navigated IMDB's web pages, accessing details such as movie
+                    titles, directors, casting, and writer information and later on convert this to csv. This pipeline ensured the systematic and
+                    efficient collection of a wide range of movie data.
+
+                    My solution was designed to gather movie-related data, providing a rich dataset for subsequent
+                    research and analysis. This included information crucial for assessing movie trends, analyzing
+                    ratings, and studying the evolution of cast members in various films.
+
+                <p> As of
+                    09/2023 my web scrapping didnt work anymore as IMDB updated their website </p>
+                </p>
+            </div>
+
+            <div class="card-links">
+                <!-- <button class="btn">📜 Read more</button> -->
+                <button class="btn" onclick="window.open('https://github.com/0StevenH0/WebScrapping/tree/main/IMDB')">💻
+                    GitHub repo</button>
+            </div>
+
+        </div>
+
+
+        <script src="script.js"></script>
+    </body>
+</body>
+
+</html>
