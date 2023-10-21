@@ -116,7 +116,7 @@
 
             <ul class="card-points">
                 <li>
-                    Utilized YOLO (You Only Look Once) architecture and modified it to adapt to the specific challenge of 
+                    Utilized Mask R-CNN architecture and modified it to adapt to the specific challenge of 
 instance segmentation of blood vessel for kaggle competition.
                 </li>
             </ul>
@@ -130,11 +130,11 @@ instance segmentation of blood vessel for kaggle competition.
                 Source : <a onclick="window.open('https://www.kaggle.com/competitions/hubmap-hacking-the-human-vasculature')">Kaggle</a>
                 </p>
                 <p>
-                    I leveraged the YOLO (You Only Look Once) architecture, a widely recognized object detection model, and customized it to suit the unique requirements of microvascular structure segmentation.
+                    I leveraged the Mask R-CNN architecture, a widely recognized instance recogniztion architecture, and customized it to suit the unique requirements of microvascular structure segmentation.
                     Then later on mask the result using coco masking
                 </p>
                 <p>
-                    in training the model, i'm using similar approach to that of YOLO paper, i first crop and resized the original image and their region, later on i train it on a classification model to predict whether the cropped part has blood vessel or not, after that i use the weight of all conv layer from classification model, and modify it to that of YOLO architecture. 
+                    in training the model, i first crop and resized the original image and their region, later on i train it on a classification model to predict whether the cropped part has blood vessel or not, after that i use the weight of all conv layer from classification model, and modify it to that of Mask R-CNN architecture. 
                 </p>
             </div>
 
